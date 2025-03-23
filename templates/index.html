@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoInspect AI System</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a2e;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            font-size: 28px;
+            margin-top: 20px;
+            color: #00adb5;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .video-container {
+            background: #0f3460;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        img {
+            width: 90%;
+            max-width: 700px;
+            border-radius: 10px;
+            border: 4px solid #00adb5;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .btn {
+            background-color: #00adb5;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #008c96;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Live Car Inspection 🚗</h2>
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Live Feed">
+        </div>
+        <br>
+        <p>Move your camera around to detect objects.</p>
+        <button class="btn" onclick="window.location.reload()">Refresh Feed</button>
+    </div>
+</body>
+</html>
